@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+/* Mobile “stacked” table view */
+@media (max-width: 520px) {
+  .table {
+    min-width: 0;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    @apply bg-white mb-3 rounded-lg border border-gray-200;
+  }
+
+  .table td {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 8px;
+    border: 0;
+    border-bottom: 1px dashed #e5e7eb;
+    padding: 12px 16px;
+  }
+
+  .table td:last-child {
+    border-bottom: 0;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+  }
+}
+h3.page-title {
+  margin-top: 0;
+  text-align: center;
+}
