@@ -76,3 +76,10 @@ npm run dev
 # Hit Curl
 
 curl http://localhost:4000/api/health
+
+
+
+## 🐳 Running with Docker
+This project supports containerized deployment using **Docker** and **Docker Compose**.  
+If you prefer not to install Node.js and MySQL locally, you can run everything inside containers.
+
